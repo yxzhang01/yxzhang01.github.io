@@ -79,14 +79,15 @@
     var ctx = canvas.getContext('2d');
 
     var regimes = [
-      { c: [-0.92, -0.42], R: 0.44, w: 2.3 },
-      { c: [0.92, -0.42], R: 0.44, w: -2.5 },
-      { c: [0.0, 0.70], R: 0.38, w: 2.8 }
+      { c: [-1.0, 0.04], R: 0.36, w: 2.4 },
+      { c: [1.0, 0.04], R: 0.36, w: -2.6 },
+      { c: [0.0, 0.78], R: 0.34, w: 2.9 },
+      { c: [0.0, -0.70], R: 0.34, w: -2.3 }
     ];
     var dt = 0.012, alpha = 2.4, noise = 0.0035;
     var TRAIL = 1500;                 // points kept on screen
     var xs = [], ys = [], ks = [];
-    var x = -0.92 + 0.44, y = -0.42, k = 0, dwell = 380;
+    var x = -1.0 + 0.36, y = 0.04, k = 0, dwell = 380;
 
     function randn() {
       var u = 1 - Math.random(), v = Math.random();
@@ -100,7 +101,7 @@
       x += dt * (radial * dx - r.w * dy) + noise * randn();
       y += dt * (radial * dy + r.w * dx) + noise * randn();
       if (--dwell <= 0) {
-        k = (k + 1 + Math.floor(Math.random() * 2)) % 3;   // jump to one of the other two
+        k = (k + 1 + Math.floor(Math.random() * (regimes.length - 1))) % regimes.length;   // jump to another regime
         dwell = 300 + Math.floor(Math.random() * 360);
       }
       xs.push(x); ys.push(y); ks.push(k);
@@ -111,7 +112,7 @@
     function refreshColors() {
       var cs = getComputedStyle(root);
       colors = {
-        k: [cs.getPropertyValue('--a').trim(), cs.getPropertyValue('--b').trim(), cs.getPropertyValue('--c').trim()],
+        k: [cs.getPropertyValue('--a').trim(), cs.getPropertyValue('--b').trim(), cs.getPropertyValue('--c').trim(), cs.getPropertyValue('--d').trim()],
         rule: cs.getPropertyValue('--rule').trim(),
         slate: cs.getPropertyValue('--slate').trim(),
         surface: cs.getPropertyValue('--surface').trim()
