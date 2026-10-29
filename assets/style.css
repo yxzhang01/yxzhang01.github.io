@@ -23,9 +23,9 @@
   --a-wash: rgba(13, 133, 132, 0.09);
   --b-wash: rgba(180, 51, 107, 0.08);
   --c-wash: rgba(196, 133, 10, 0.11);
-  --d: #6c48c6;          /* dynamical systems — violet */
-  --d-text: #5a38ad;
-  --d-wash: rgba(108, 72, 198, 0.09);
+  --d: #9a86f2;          /* dynamical systems — lavender */
+  --d-text: #7158d8;
+  --d-wash: rgba(154, 134, 242, 0.12);
 
   --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --sans: "Hanken Grotesk", "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -50,7 +50,7 @@
     --a-wash: rgba(63, 194, 188, 0.12);
     --b-wash: rgba(239, 127, 171, 0.11);
     --c-wash: rgba(240, 187, 72, 0.11);
-    --d: #b29bff; --d-text: #c5b4ff; --d-wash: rgba(178, 155, 255, 0.12);
+    --d: #bcaeff; --d-text: #cfc4ff; --d-wash: rgba(188, 174, 255, 0.12);
     color-scheme: dark;
   }
 }
@@ -68,7 +68,7 @@
   --a-wash: rgba(63, 194, 188, 0.12);
   --b-wash: rgba(239, 127, 171, 0.11);
   --c-wash: rgba(240, 187, 72, 0.11);
-  --d: #b29bff; --d-text: #c5b4ff; --d-wash: rgba(178, 155, 255, 0.12);
+  --d: #bcaeff; --d-text: #cfc4ff; --d-wash: rgba(188, 174, 255, 0.12);
   color-scheme: dark;
 }
 
