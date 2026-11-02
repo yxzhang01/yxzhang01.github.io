@@ -331,8 +331,6 @@ p:last-child { margin-bottom: 0; }
   font-size: 0.875rem; color: var(--slate);
 }
 .footer p { margin: 0; }
-.visitors { max-width: 340px; border-radius: 8px; overflow: hidden; }
-.visitors img, .visitors canvas { max-width: 100%; height: auto; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
@@ -365,7 +363,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 @media print {
-  .topbar, .dynamics, .visitors, .theme-toggle, .skip-link { display: none !important; }
+  .topbar, .dynamics, .theme-toggle, .skip-link { display: none !important; }
   .section > h2, .year { position: static; }
   body { background: #fff; }
 }
